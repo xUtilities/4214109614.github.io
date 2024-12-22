@@ -102,26 +102,6 @@
             margin-bottom: 20px;
         }
 
-        footer > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-
-        footer a,
-        footer span {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 15px;
-        }
-
-        footer a {
-            cursor: pointer;
-        }
-
         /* Title text below each tile */
         .tile-title {
             font-size: 24px;
@@ -416,26 +396,23 @@
             </div>
         </div>
     </div>
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
 
-    <footer>
-        <div>
-            <a title="The Official xUtilities Site" href="https://www.xutilities.linkpc.net">xUtilities</a>
-            <a title="Play in xUtilities" href="https://www.xutilities.linkpc.net/play">Play</a>
-            <a title="Cheat in xUtilities" href="https://www.xutilities.linkpc.net/cheat">Cheat</a>
-            <a title="About xUtilities" href="https://www.xutilities.linkpc.net/about">About xUtilities</a>
-        </div>
-        <div>
-            <span>xUtilities 2024</span>
-        </div>
-    </footer>
-
-    <!-- Navbar loading script -->
+    <!-- Navbar and Footer loading scripts -->
     <script>
         // Fetch the navbar.html file and insert it into the page
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        // Fetch the footer.html file and insert it into the page
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
 </body>
