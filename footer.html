@@ -6,47 +6,70 @@
     <title>What are you doing here bro?</title>
     
     <style>
-        footer {
-          font-family: arial;
-            margin: 0 5vw;
-            margin-top: auto;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            line-height: 30px;
-            margin-bottom: 20px;
-        }
-        footer > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
+            min-height: 100vh;
         }
 
-        footer a,
-        footer span {
-            margin: 0 15px;
-            text-decoration: none;
+        footer {
+            background-color: #333;
             color: #fff;
-            font-size: 15px;
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer li {
+            display: inline;
         }
 
         footer a {
-            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        footer a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        footer span {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
+
     <footer>
-        <div>
-            <a title="The Official xUtilities Site" href="https://www.xutilities.linkpc.net">xUtilities</a>
-            <a title="Play in xUtilities" href="https://www.xutilities.linkpc.net/play">Play</a>
-            <a title="Cheat in xUtilities" href="https://www.xutilities.linkpc.net/cheat">Cheat</a>
-            <a title="About xUtilities" href="https://www.xutilities.linkpc.net/about">About xUtilities</a>
-        </div>
-        <div>
-            <span>xUtilities 2024</span>
-        </div>
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="play.html">Play</a></li>
+            <li><a href="cheat.html">Cheat</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+        
+        <!-- Footer text -->
+        <span>&copy; xUtilities 2024</span>
     </footer>
+
 </body>
 </html>
