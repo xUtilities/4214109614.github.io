@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play | xUtilities</title>
- 
+    <title>Rounded Transparent Square with Multi-Row Grid</title>
+
     <style>
         /* Full page background with parallax effect */
         body {
@@ -126,6 +126,10 @@
     </style>
 </head>
 <body>
+    <!-- Navbar placeholder (will be dynamically loaded here) -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main title -->
     <div class="title">Play</div>
 
     <!-- Section 1 -->
@@ -155,7 +159,6 @@
                 </a>
                 <div class="tile-title">Tile 4</div>
             </div>
-
             <div>
                 <a href="#" target="_blank">
                     <div class="inner-square" style="background-image: url('https://convertingcolors.com/background-252525.svg');"></div>
@@ -386,6 +389,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div>
             <a title="xUtilities" href="https://www.xutilities.linkpc.net">xUtilities</a>
@@ -397,5 +401,20 @@
             <span>xUtilities 2024</span>
         </div>
     </footer>
+
+    <!-- Navbar loading script -->
+    <script>
+        // Fetch the navbar.html file and insert it into the page
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
+
+
+
+
+
