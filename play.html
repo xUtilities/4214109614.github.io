@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rounded Transparent Square with Multi-Row Grid</title>
-
+    <title>Play | xUtilities</title>
     <style>
         /* Full page background with parallax effect */
         body {
@@ -23,29 +22,27 @@
             color: white;
         }
 
+        /* Title container */
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 200px 0;
+        }
+
         /* Title styling */
         .title {
             font-size: 150px;
             font-family: Arial, sans-serif;
             font-weight: bold;
             color: #ffffff;
-            margin: 100px 0;
-            text-align: center;
-        }
-
-        /* Subtitle styling */
-        .subtitle {
-            font-size: 72px;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            color: #ffffff;
-            margin: 100px;
+            margin-left: 20px;
             text-align: center;
         }
 
         /* Outer rounded square with glassmorphic effect */
         .outer-square {
-            width: 800px;
+            width: 900px;
             background-color: rgba(28, 28, 28, 0.5); 
             border-radius: 45px;
             display: flex;
@@ -57,6 +54,16 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Subtitle styling */
+        .subtitle {
+            font-size: 72px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 100px;
+            text-align: center;
         }
 
         /* Grid container inside the outer square */
@@ -123,14 +130,35 @@
             margin-top: 10px;
             text-decoration: none;
         }
+
+        
+
+        .overlay-text {
+            position: fixed; /* Stays fixed on the screen */
+            bottom: 20px; /* Distance from the bottom */
+            left: 50%; /* Align horizontally to the center */
+            transform: translateX(-50%); /* Perfectly center the element */
+            background-color: rgba(0, 0, 0, 0.7); /* Optional: Semi-transparent black background */
+            color: #ffffff; /* White text */
+            padding: 10px 20px; /* Padding for the text box */
+            font-size: 18px; /* Adjust font size */
+            border-radius: 8px; /* Optional: Rounded corners */
+            z-index: 9999; /* Ensure it overlays everything */
+            text-align: center; /* Center text horizontally */
+            pointer-events: none; /* Makes sure it doesn’t block clicks behind it */
+        }
+
     </style>
 </head>
 <body>
-    <!-- Navbar placeholder (will be dynamically loaded here) -->
+    <!-- Navbar included in all pages -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Main title -->
-    <div class="title">Play</div>
+    <!-- Page content -->
+    <div class="title-container">
+        <div class="title-image"></div>
+        <div class="title">Play</div>
+    </div>
 
     <!-- Section 1 -->
     <div class="outer-square">
@@ -389,10 +417,9 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div>
-            <a title="xUtilities" href="https://www.xutilities.linkpc.net">xUtilities</a>
+            <a title="The Official xUtilities Site" href="https://www.xutilities.linkpc.net">xUtilities</a>
             <a title="Play in xUtilities" href="https://www.xutilities.linkpc.net/play">Play</a>
             <a title="Cheat in xUtilities" href="https://www.xutilities.linkpc.net/cheat">Cheat</a>
             <a title="About xUtilities" href="https://www.xutilities.linkpc.net/about">About xUtilities</a>
@@ -413,8 +440,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
