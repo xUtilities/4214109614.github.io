@@ -6,70 +6,49 @@
     <title>What are you doing here bro?</title>
     
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        footer {
+          font-family: arial;
+            margin: 0 5vw;
+            margin-top: auto;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            line-height: 30px;
+            margin-bottom: 20px;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            margin-top: auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        footer > div {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
         }
 
-        footer li {
-            display: inline;
+        footer a,
+        footer span {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
         }
 
         footer a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-
-        footer a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-
-        footer span {
-            display: block;
-            margin-top: 10px;
-            font-size: 14px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
+    <!-- Footer -->
     <footer>
-        <!-- Navigation Links -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="play.html">Play</a></li>
-            <li><a href="cheat.html">Cheat</a></li>
-            <li><a href="help.html">Help</a></li>
-        </ul>
-        
-        <!-- Footer text -->
-        <span>&copy; xUtilities 2024</span>
+        <div>
+            <a title="Home" href="index.html">Home</a>
+            <a title="Play" href="play.html">Play</a>
+            <a title="Cheat" href="cheat.html">Cheat</a>
+            <a title="Help" href="help.html">Help</a>
+        </div>
+        <div>
+            <span>xUtilities 2024</span>
+        </div>
     </footer>
-
 </body>
 </html>
