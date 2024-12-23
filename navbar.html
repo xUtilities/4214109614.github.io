@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar and Topbar with Search</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      flex-direction: column;
+    }
+
+    /* Topbar Styles */
+    .topbar {
+      background-color: rgba(28, 28, 28, 0.9);
+      border: 0.01px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      width: calc(100% - 250px);
+      padding: 20px 20px;
+      color: white;
+      display: flex;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      left: 250px;
+      z-index: 1000;
+    }
+
+    .topbar input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 30px;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      background-color: rgba(28, 28, 28, 0.8);
+      border: 0.01px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      align-items: center;
+      width: 250px;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+    }
+
+    /* Sidebar Logo and Title */
+    .sidebar .logo-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .logo-title img {
+      width: 40px; /* Adjust for logo size */
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 8px; /* Optional for rounded corners */
+    }
+
+    .sidebar h1 {
+      color: white;
+      font-size: 24px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    /* Sidebar Link Styles */
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      display: inline-block;
+      position: relative;
+      font-weight: 500;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 100%;
+      background-color: rgba(37, 37, 37, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease, background-size 0.3s ease-in-out;
+      z-index: -1;
+      border: 0.01px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      background-size: 140%;
+    }
+
+    .sidebar a:hover::before {
+      opacity: 1;
+      background-size: 160%;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+
+      .topbar input[type="text"] {
+        width: 200px;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .topbar {
+        width: calc(100% - 200px);
+        left: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar input[type="text"] {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <input type="text" placeholder="Search...">
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo-title">
+      <img src="/assets/favicon.ico" alt="Logo"> <!-- Logo -->
+      <h1>xUtilities</h1>
+    </div>
+    <a href="/">Home</a>
+    <a href="/play">Play</a>
+    <a href="/cheat">Cheat</a>
+    <a href="/help">Help</a>
+    <a href="/about">About</a>
+  </div>
+
+</body>
+</html>
