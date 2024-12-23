@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sidebar and Topbar with Search</title>
+  <title>get outta here</title>
   <style>
     * {
       margin: 0;
@@ -31,6 +31,7 @@
       color: white;
       display: flex;
       justify-content: flex-start;
+      align-items: center;
       position: fixed;
       top: 0;
       left: 225px;
@@ -38,10 +39,38 @@
     }
 
     .topbar input[type="text"] {
+      border: 0.01px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       padding: 10px;
       width: 300px;
+      height: 40px; /* Ensures the height of the input */
       border: none;
       border-radius: 30px;
+    }
+
+    /* Button on the right side */
+    .topbar .btn {
+      border: 0.01px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      background-color: rgba(85, 85, 85, 0.8);
+      color: white;
+      width: 40px; /* Set the width to be the same as the height */
+      height: 40px; /* Same height as the input field */
+      margin-left: auto; /* Pushes the button to the right */
+      border-radius: 50%; /* Makes the button circular */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .topbar .btn:hover {
+      background-color: rgba(85, 85, 85, 1);
     }
 
     /* Sidebar Styles */
@@ -151,7 +180,9 @@
 
   <!-- Topbar -->
   <div class="topbar">
-    <input type="text" placeholder="Search...">
+    <input type="text" placeholder="Search xUtilities...">
+    <!-- Circular button on the right side of the topbar -->
+    <button class="btn">⚙︎</button>
   </div>
 
   <!-- Sidebar -->
