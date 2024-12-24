@@ -80,7 +80,6 @@
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      align-items: center;
       width: 225px;
       color: white;
       position: fixed;
@@ -95,16 +94,19 @@
 
     /* Sidebar Logo and Title */
     .sidebar .logo-title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-    }
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 10px; /* Add padding to move the logo and title to the right */
+}
+
 
     .sidebar .logo-title img {
       width: 32px; /* Adjust for logo size */
       height: 30px;
       margin-right: 10px;
       border-radius: 8px; /* Optional for rounded corners */
+      margin-left: 20px; /* Add margin to the logo to move it slightly to the right */
     }
 
     .sidebar h1 {
@@ -112,20 +114,23 @@
       font-size: 24px;
       padding: 5px;
       text-align: center;
+      margin-left: 10px; /* Add margin to the logo to move it slightly to the right */
     }
 
     /* Sidebar Link Styles */
     .sidebar a {
-      color: white;
-      text-decoration: none;
-      padding: 15px;
-      font-size: 18px;
-      display: inline-block;
-      position: relative;
-      font-weight: 500;
-      margin-bottom: 15px;
-      transition: color 0.3s ease;
-    }
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  padding-left: 45px; /* Add extra 10px to move links to the right */
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
 
     .sidebar a::before {
       content: "";
